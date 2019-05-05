@@ -44,8 +44,11 @@ int main(){
         long salary;
     }Employee;
 
-    auto emps = make_unique<Employee[]>(10); 
-    unique_ptr<Employee> emp1(new Employee);   
+    auto emps = make_unique<Employee[]>(10); // C++14 onwards
+    unique_ptr<Employee[]> emp1(new Employee[10]); // Prior to C++14
+
+    auto emps1 = make_shared<Employee>;
+    shared_ptr<Employee[]> emps2(new Employee[10]); 
 
     delete[] arr;
     arr = nullptr;
