@@ -47,10 +47,13 @@ void printPerm(char * input, int i, int& count){
 
     for(int j=i;input[j]!='\0';j++){
         swap(input[i], input[j]);
-        count++;
         printPerm(input, i+1, count);
         swap(input[i], input[j]);
     }
+}
+
+void ref(int& z){
+    z++;
 }
 
 int main(){
@@ -62,10 +65,16 @@ int main(){
     char input[100];
     cout << "Enter string: ";
     cin >> input;
-    int * count;
-    *count = 0;
-    printPerm(input, 0, *count);
-    cout << *count << endl;
+    int count = 0;
+    printPerm(input, 0, count);
+    cout << count << endl;
+
+    int x = 10;
+    int& y = x;
+
+    cout << x << " " << y << endl;
+    ref(x);
+    cout << x << " " << y << endl;
 
     return 0;
 }

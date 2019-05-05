@@ -15,7 +15,7 @@ int addition(initializer_list<int> lst){
 }
 
 bool cmp(int a, int b){
-    return a > b;
+    return a < b;
 }
 
 void func(char* str){
