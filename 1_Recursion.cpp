@@ -129,20 +129,17 @@ void mergesort(int a[], int s, int e){
 }
 
 int main(){
-    // int arr[] = {5,4,3,2,1};
-    // int length = sizeof(arr)/sizeof(arr[0]), x;
+    int arr[] = {5,4,3,2,1};
+    int length = sizeof(arr)/sizeof(arr[0]), x;
 
-    // mergesort(arr, 0, length - 1);
+    mergesort(arr, 0, length - 1);
 
-    // for(int i=0;i<length;i++)
-    //     cout << arr[i] << " ";   
-    // cout << "\n" << "Enter the number to search for: ";
-    // cin >> x;
-    // int index = brec(arr, 0, length, x);
-    // if(index)
-    //     cout << x << " found at index " << index << endl;
-    int a, b;
-    cin >> a >> b;
-    int res = fastpower(a,b);
-    cout << res << endl;
+    for(int i=0;i<length;i++)
+        cout << arr[i] << " ";   
+    cout << "\n" << "Enter the number to search for: ";
+    cin >> x;
+    int index = brec(arr, 0, length, x);
+    if(index)
+        cout << x << " found at index " << index << endl;
+    
 }
